@@ -4,14 +4,15 @@ using UnityEngine;
 
 public class RingManager : MonoBehaviour
 {
-
-    // Spawns rings
-
     // Assigns number of rings
     [SerializeField] private int maxNumberOfRings;
     public int MaxNumberOfRings { get => maxNumberOfRings; }
+
+    // Spawns the rings
+
+    // Adjust sizes of the rings
     
-    // Assigns color of rings
+    // Assigns colors for the rings
     
     void Start()
     {

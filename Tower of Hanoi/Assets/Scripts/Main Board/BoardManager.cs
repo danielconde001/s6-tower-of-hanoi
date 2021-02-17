@@ -9,6 +9,9 @@ public class BoardManager : MonoBehaviour
 
     public Peg StartingPeg { get => pegs[0]; }
 
+    [SerializeField] private float positionYOffset;
+    public float PositionYOffset { get => positionYOffset; }
+
     private Condition winCondition; // Might want to put this somewhere else more appropriate
 
     private void Awake() {
@@ -17,7 +20,7 @@ public class BoardManager : MonoBehaviour
 
     void Update()
     {
-        if (winCondition.Check()) print("Condition met!"); // Debug purposes
+       // if (winCondition.Check()) print("Condition met!"); // Debug purposes
     }
 
 }

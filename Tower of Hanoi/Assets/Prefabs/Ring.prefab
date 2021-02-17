@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 2467985687220245059}
   - component: {fileID: 2467985687220245060}
   - component: {fileID: 2467985687220245061}
+  - component: {fileID: 4262729442380965943}
+  - component: {fileID: 1205221356136072645}
   m_Layer: 0
   m_Name: Ring
   m_TagString: Untagged
@@ -79,3 +81,30 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &4262729442380965943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2467985687220245063}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a2813a32e556e94b889e90ec5f038d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  designatedPosition: {x: 0, y: 0, z: 0}
+  Offset: {x: 0, y: 0, z: 0}
+--- !u!114 &1205221356136072645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2467985687220245063}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c15dd2ca8c4bc744587330c42d762123, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material: {fileID: 0}

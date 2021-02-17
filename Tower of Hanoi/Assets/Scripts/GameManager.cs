@@ -30,7 +30,7 @@ public class GameManager : MonoBehaviour
         boardManager = FindObjectOfType<BoardManager>();
         if (!boardManager) 
         {
-            GameObject newObj = (GameObject)Instantiate(Resources.Load("Board"));
+            GameObject newObj = (GameObject)Instantiate(Resources.Load("Tower of Hanoi System"));
             boardManager = newObj.GetComponent<BoardManager>();
         }
     }

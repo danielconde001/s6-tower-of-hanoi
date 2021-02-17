@@ -2,11 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Draggable))]
-public class Ring : MonoBehaviour
+public class Draggable : MonoBehaviour
 {
     [HideInInspector] public Vector3 designatedPosition;
-    public Material material;
     [SerializeField] Vector3 Offset;
     float zPos;
 
@@ -35,6 +33,4 @@ public class Ring : MonoBehaviour
 
         return Camera.main.ScreenToWorldPoint(mousePoint);
     }
-
-
 }
