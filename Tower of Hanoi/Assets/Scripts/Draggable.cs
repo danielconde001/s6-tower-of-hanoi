@@ -1,19 +1,23 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Draggable : MonoBehaviour
 {
-    [HideInInspector] public Vector3 designatedPosition;
-    [SerializeField] Vector3 Offset;
+    public Vector3 dropPosition;
+    public Vector3 designatedPosition;
+    [SerializeField] Vector3 OnDragPositionOffset;
     float zPos;
 
-    private void Awake() {
-        designatedPosition = transform.position;
-    }
+    public delegate void ClickAction();
+    public event ClickAction onMouseDrag;
+    public event ClickAction onMouseUp;
 
     private void OnMouseUp() {
-        transform.position = designatedPosition;
+        transform.position = dropPosition;
+        designatedPosition = dropPosition;
+        onMouseUp();
     }
 
     private void OnMouseDown()
@@ -23,7 +27,8 @@ public class Draggable : MonoBehaviour
 
     private void OnMouseDrag()
     {
-        transform.position = GetMouseWolrdPos() + Offset;
+        transform.position = GetMouseWolrdPos() + OnDragPositionOffset;
+        onMouseDrag();
     }
 
     private Vector3 GetMouseWolrdPos()

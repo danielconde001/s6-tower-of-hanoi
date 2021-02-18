@@ -33,6 +33,13 @@ public class GameManager : MonoBehaviour
             GameObject newObj = (GameObject)Instantiate(Resources.Load("Tower of Hanoi System"));
             boardManager = newObj.GetComponent<BoardManager>();
         }
+
+        ringManager = FindObjectOfType<RingManager>();
+        if (!boardManager) 
+        {
+            GameObject newObj = (GameObject)Instantiate(Resources.Load("Tower of Hanoi System"));
+            ringManager = newObj.GetComponent<RingManager>();
+        }
     }
 
     [SerializeField] BoardManager boardManager;
