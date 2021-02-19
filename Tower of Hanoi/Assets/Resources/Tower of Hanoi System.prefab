@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3710457154691537948}
   - component: {fileID: 3710457154691537949}
   - component: {fileID: 3710457154691537950}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Board
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -141,7 +141,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6da86379ff2f70147b696445b2137870, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pegs:
+  pegsOnBoard:
   - {fileID: 1666229398}
   - {fileID: 654070750}
   - {fileID: 1319788220}
@@ -157,7 +157,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3968645301f7cfb44ae577df35b90fa3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxNumberOfRings: 3
+  maxNumberOfRings: 7
+  listOfAllRings: []
+  largestPossibleRingSize: 5
+  smallestPossibleRingSize: 2
+  generalRingHeight: 0.2
+  yOffsetPerRing: 0.35
+  availableRingColors:
+  - {r: 0.9528302, g: 0.013483422, b: 0.013483422, a: 0}
+  - {r: 1, g: 0.9878615, b: 0.1273585, a: 0}
+  - {r: 0, g: 0, b: 1, a: 0}
+  - {r: 0.08799554, g: 0.4245283, b: 0, a: 0}
+  - {r: 0.63072395, g: 0, b: 1, a: 0}
+  - {r: 0.8773585, g: 0.48095354, b: 0, a: 0}
 --- !u!114 &1319788220
 MonoBehaviour:
   m_ObjectHideFlags: 0

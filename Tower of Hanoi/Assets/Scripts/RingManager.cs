@@ -39,7 +39,9 @@ public class RingManager : MonoBehaviour
             GameObject spawnObj = Instantiate(Resources.Load("Ring")) as GameObject;
             Ring spawnedRing = spawnObj.GetComponent<Ring>();
             listOfAllRings.Add(spawnedRing);
+
             GameManager.Instance.BoardManager.StartingPeg.CurrentSetOfRings.Push(listOfAllRings[i]);
+            listOfAllRings[i].RespectivePeg = GameManager.Instance.BoardManager.StartingPeg;
         }
     }
 
@@ -52,9 +54,7 @@ public class RingManager : MonoBehaviour
         {
             Vector3 assignedPosition = new Vector3(0, yOffsetPerRing * (i+1));
             assignedPosition.z = GameManager.Instance.BoardManager.StartingPeg.transform.position.z;
-            listOfAllRings[i].DesignatedPosition = assignedPosition;
-            listOfAllRings[i].DropPosition = listOfAllRings[i].DesignatedPosition;
-            listOfAllRings[i].transform.position = listOfAllRings[i].DesignatedPosition;
+            listOfAllRings[i].transform.position = assignedPosition;
         }
     }
 
@@ -65,16 +65,14 @@ public class RingManager : MonoBehaviour
 
         for (int i = 0; i < maxNumberOfRings; i++)
         {
-            float a = (largestPossibleRingSize - smallestPossibleRingSize);
-            float b = 1f / (maxNumberOfRings - 1f);
-            float ringSizeDecrement = a * b;
+            float ringSizeDecrement = 
+                (largestPossibleRingSize - smallestPossibleRingSize) * 1f / (maxNumberOfRings - 1f);
 
             listOfAllRings[i].RingSize = largestPossibleRingSize - (i * ringSizeDecrement);
 
-            Vector3 assignedScale;
-            assignedScale.x = listOfAllRings[i].RingSize;
-            assignedScale.y = generalRingHeight;
-            assignedScale.z = assignedScale.x;
+            Vector3 assignedScale = 
+                new Vector3(listOfAllRings[i].RingSize, generalRingHeight, listOfAllRings[i].RingSize);
+            
             listOfAllRings[i].transform.localScale = assignedScale;
         }
     }
@@ -90,17 +88,26 @@ public class RingManager : MonoBehaviour
         } 
     }
 
+    // Assign Rings to Starting Peg
+    private void AssignRingsToStartingPeg()
+    {
+        if (ListOfRingsIsEmpty()) return;
 
-#region Empty List Checker
+        for (int i = 0; i < maxNumberOfRings; i++)
+        {
+            GameManager.Instance.BoardManager.StartingPeg.CurrentSetOfRings.Push(listOfAllRings[i]);
+            listOfAllRings[i].RespectivePeg = GameManager.Instance.BoardManager.StartingPeg;
+        }
+    }
+
     // Checks if List of all rings is still empty
     private bool ListOfRingsIsEmpty()
     {
         if (listOfAllRings.Count <= 0) {
-            Debug.LogWarning("List is empty", this); 
+            Debug.LogWarning("List of Rings is empty", this); 
             return true;
         }
 
         else return false;
     }
-#endregion
 }

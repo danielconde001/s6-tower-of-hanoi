@@ -1,34 +1,34 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
 
 public class Draggable : MonoBehaviour
 {
-    public Vector3 dropPosition;
-    public Vector3 designatedPosition;
-    [SerializeField] Vector3 OnDragPositionOffset;
-    float zPos;
-
-    public delegate void ClickAction();
-    public event ClickAction onMouseDrag;
-    public event ClickAction onMouseUp;
-
-    private void OnMouseUp() {
-        transform.position = dropPosition;
-        designatedPosition = dropPosition;
-        onMouseUp();
+    [SerializeField] protected bool isDraggable = false;
+    public bool IsDraggable
+    {
+        get => isDraggable;
+        set => isDraggable = value;
     }
 
-    private void OnMouseDown()
-    {
-        zPos = Camera.main.WorldToScreenPoint(transform.position).z;
+    [SerializeField] protected Vector3 OnDragPositionOffset;
+    protected float zPos;
+
+    protected virtual void OnMouseUp() {
+        if (isDraggable)
+            transform.position = transform.position - OnDragPositionOffset;
     }
 
-    private void OnMouseDrag()
+    protected virtual void OnMouseDown()
     {
-        transform.position = GetMouseWolrdPos() + OnDragPositionOffset;
-        onMouseDrag();
+        if (isDraggable)
+            zPos = Camera.main.WorldToScreenPoint(transform.position).z;
+    }
+
+    protected virtual void OnMouseDrag()
+    {
+        if (isDraggable)
+            transform.position = GetMouseWolrdPos() + OnDragPositionOffset;
     }
 
     private Vector3 GetMouseWolrdPos()

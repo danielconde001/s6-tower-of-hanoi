@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8239707106875657090}
   - component: {fileID: 8239707106875657102}
   - component: {fileID: 8239707106875657097}
-  - component: {fileID: 7906689330382719010}
+  - component: {fileID: 8670462958252116326}
   m_Layer: 8
   m_Name: Ring
   m_TagString: Untagged
@@ -91,7 +91,7 @@ MeshCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8239707106875657091}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 4
   m_Convex: 1
@@ -121,10 +121,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a2813a32e556e94b889e90ec5f038d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dropPosition: {x: 0, y: 0, z: 0}
-  designatedPosition: {x: 0, y: 0, z: 0}
-  OnDragPositionOffset: {x: 0, y: 0, z: 0}
---- !u!114 &7906689330382719010
+  isDraggable: 1
+  OnDragPositionOffset: {x: 0, y: 0.25, z: 0}
+--- !u!114 &8670462958252116326
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -133,8 +132,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 8239707106875657091}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3342f078e5c76c34c9c460a0f5c809d3, type: 3}
+  m_Script: {fileID: 11500000, guid: c834845aad891f74993827df9295f4ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  seeThroughMaterial: {fileID: 2100000, guid: 95ebde51a7935ad418878c8fb8a176a7, type: 2}
-  defaultMaterial: {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}

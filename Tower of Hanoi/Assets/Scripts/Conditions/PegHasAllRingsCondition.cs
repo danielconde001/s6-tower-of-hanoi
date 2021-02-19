@@ -14,11 +14,11 @@ public class PegHasAllRingsCondition : Condition
 
     public override bool Check()
     {
-        for (int i = 0; i < boardManager.Pegs.Count; i++)
+        for (int i = 0; i < boardManager.PegsOnBoard.Count; i++)
         {
-            if (boardManager.Pegs[i] == boardManager.StartingPeg) continue;
+            if (boardManager.PegsOnBoard[i] == boardManager.StartingPeg) continue;
 
-            else if (boardManager.Pegs[i].CurrentSetOfRings.Count >= ringManager.MaxNumberOfRings)
+            else if (boardManager.PegsOnBoard[i].CurrentSetOfRings.Count >= ringManager.MaxNumberOfRings)
             {
                 return true;
             }       

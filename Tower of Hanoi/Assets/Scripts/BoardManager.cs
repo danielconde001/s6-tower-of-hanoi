@@ -4,20 +4,13 @@ using UnityEngine;
 
 public class BoardManager : MonoBehaviour
 {
-    [SerializeField] private List<Peg> pegs = new List<Peg>();
-    public List<Peg> Pegs { get => pegs; }
+    [SerializeField] private List<Peg> pegsOnBoard = new List<Peg>();
+    public List<Peg> PegsOnBoard { get => pegsOnBoard; }
 
-    public Peg StartingPeg { get => pegs[0]; }
+    public Peg StartingPeg { get => pegsOnBoard[0]; }
 
-    private Condition winCondition; // Might want to put this somewhere else more appropriate
-
-    private void Awake() {
-        winCondition = GetComponent<Condition>();
-    }
-
-    void Update()
-    {
-       // if (winCondition.Check()) print("Condition met!"); // Debug purposes
+    private void Update() {
+        Debug.Log(pegsOnBoard[0].CurrentSetOfRings.Count + ", " + pegsOnBoard[1].CurrentSetOfRings.Count + ", " + pegsOnBoard[2].CurrentSetOfRings.Count);
     }
 
 }
