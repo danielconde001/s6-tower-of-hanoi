@@ -1,6 +1,8 @@
-﻿using System.Collections;
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class RingManager : MonoBehaviour
 {
@@ -24,11 +26,19 @@ public class RingManager : MonoBehaviour
     [SerializeField] private List<Color> availableRingColors;
     public List<Color> AvailableRingColors { get => availableRingColors; }
 
+    private Ring currentlyDraggedRing;
+    public Ring CurrentlyDraggedRing
+    {
+        get => currentlyDraggedRing;
+        set => currentlyDraggedRing = value;
+    }
+
     private void Start() {
         CreateRings();
         PositionRings();
         AdjustRingSizes();
         AssignRingColors();
+        ResetDragabbles();
     }
 
     // Spawns the rings
@@ -40,7 +50,7 @@ public class RingManager : MonoBehaviour
             Ring spawnedRing = spawnObj.GetComponent<Ring>();
             listOfAllRings.Add(spawnedRing);
 
-            GameManager.Instance.BoardManager.StartingPeg.CurrentSetOfRings.Push(listOfAllRings[i]);
+            GameManager.Instance.BoardManager.StartingPeg.StackOfRings.Push(listOfAllRings[i]);
             listOfAllRings[i].RespectivePeg = GameManager.Instance.BoardManager.StartingPeg;
         }
     }
@@ -95,8 +105,43 @@ public class RingManager : MonoBehaviour
 
         for (int i = 0; i < maxNumberOfRings; i++)
         {
-            GameManager.Instance.BoardManager.StartingPeg.CurrentSetOfRings.Push(listOfAllRings[i]);
+            GameManager.Instance.BoardManager.StartingPeg.StackOfRings.Push(listOfAllRings[i]);
             listOfAllRings[i].RespectivePeg = GameManager.Instance.BoardManager.StartingPeg;
+        }
+    }
+
+    // Called when ring is dragged
+    public void OnRingDrag()
+    {
+        if (ListOfRingsIsEmpty()) return;
+
+        for (int i = 0; i < listOfAllRings.Count; i++)
+        {
+            if (listOfAllRings[i] == currentlyDraggedRing) listOfAllRings[i].GetComponent<Draggable>().IsDraggable = true;
+
+            else listOfAllRings[i].GetComponent<Draggable>().IsDraggable = false;
+        }
+    }
+    
+    // Called when ring is dropped
+    public void OnRingDrop()
+    {
+        ResetDragabbles();
+    }
+
+    // Set all draggables to false, except for Rings that are on top of each Peg
+    private void ResetDragabbles()
+    {
+        if (ListOfRingsIsEmpty()) return;
+
+        for (int i = 0; i < listOfAllRings.Count; i++)
+        {
+            if (listOfAllRings[i].IsTopOfStack)
+            {
+                listOfAllRings[i].GetComponent<Draggable>().IsDraggable = true;
+            }
+
+            else listOfAllRings[i].GetComponent<Draggable>().IsDraggable = false;
         }
     }
 
@@ -111,3 +156,4 @@ public class RingManager : MonoBehaviour
         else return false;
     }
 }
+

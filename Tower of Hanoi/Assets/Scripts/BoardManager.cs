@@ -10,7 +10,7 @@ public class BoardManager : MonoBehaviour
     public Peg StartingPeg { get => pegsOnBoard[0]; }
 
     private void Update() {
-        Debug.Log(pegsOnBoard[0].CurrentSetOfRings.Count + ", " + pegsOnBoard[1].CurrentSetOfRings.Count + ", " + pegsOnBoard[2].CurrentSetOfRings.Count);
+        //Debug.Log(pegsOnBoard[0].StackOfRings.Count + ", " + pegsOnBoard[1].StackOfRings.Count + ", " + pegsOnBoard[2].StackOfRings.Count);
     }
 
 }

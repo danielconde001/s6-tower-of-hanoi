@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Draggable : MonoBehaviour
 {
-    [SerializeField] protected bool isDraggable = false;
+    [SerializeField] protected bool isDraggable;
     public bool IsDraggable
     {
         get => isDraggable;

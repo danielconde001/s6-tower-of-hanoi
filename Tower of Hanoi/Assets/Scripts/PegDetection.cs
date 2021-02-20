@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -40,8 +40,8 @@ public class PegDetection : MonoBehaviour
 
     private bool PegIsValidToDropRingOn(Peg detectedPeg)
     {
-        if (detectedPeg.CurrentSetOfRings.Count <= 0) return true;
-        else if (detectedPeg.CurrentSetOfRings.Peek().RingSize < this.ring.RingSize) return false;
+        if (detectedPeg.StackOfRings.Count <= 0) return true;
+        else if (detectedPeg.StackOfRings.Peek().RingSize < this.ring.RingSize) return false;
         else return true;
     }
 }

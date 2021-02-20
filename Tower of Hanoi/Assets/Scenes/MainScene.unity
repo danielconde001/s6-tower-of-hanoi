@@ -334,13 +334,25 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.07698047, y: -0.702904, z: 0.07698047, w: 0.702904}
-  m_LocalPosition: {x: 9.35, y: 4.5, z: 0}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 9.35, y: 2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 12.5, y: -90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!114 &1028923381 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1672417027, guid: e09c8ef740a1d224d92f65d78c4642d9,
+    type: 3}
+  m_PrefabInstance: {fileID: 3710457155857248699}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3968645301f7cfb44ae577df35b90fa3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &3710457155857248699
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -348,6 +360,70 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1672417027, guid: e09c8ef740a1d224d92f65d78c4642d9, type: 3}
+      propertyPath: yOffsetPerRing
+      value: 0.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 1672417027, guid: e09c8ef740a1d224d92f65d78c4642d9, type: 3}
+      propertyPath: maxNumberOfRings
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1672417027, guid: e09c8ef740a1d224d92f65d78c4642d9, type: 3}
+      propertyPath: generalRingHeight
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1672417027, guid: e09c8ef740a1d224d92f65d78c4642d9, type: 3}
+      propertyPath: largestPossibleRingSize
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1672417027, guid: e09c8ef740a1d224d92f65d78c4642d9, type: 3}
+      propertyPath: OnRingDrag.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1672417027, guid: e09c8ef740a1d224d92f65d78c4642d9, type: 3}
+      propertyPath: OnRingDrop.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1672417027, guid: e09c8ef740a1d224d92f65d78c4642d9, type: 3}
+      propertyPath: OnRingDrag.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1672417027, guid: e09c8ef740a1d224d92f65d78c4642d9, type: 3}
+      propertyPath: OnRingDrop.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1672417027, guid: e09c8ef740a1d224d92f65d78c4642d9, type: 3}
+      propertyPath: OnRingDrag.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1028923381}
+    - target: {fileID: 1672417027, guid: e09c8ef740a1d224d92f65d78c4642d9, type: 3}
+      propertyPath: OnRingDrop.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1028923381}
+    - target: {fileID: 1672417027, guid: e09c8ef740a1d224d92f65d78c4642d9, type: 3}
+      propertyPath: OnRingDrag.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1672417027, guid: e09c8ef740a1d224d92f65d78c4642d9, type: 3}
+      propertyPath: OnRingDrop.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1672417027, guid: e09c8ef740a1d224d92f65d78c4642d9, type: 3}
+      propertyPath: OnRingDrag.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnDrag
+      objectReference: {fileID: 0}
+    - target: {fileID: 1672417027, guid: e09c8ef740a1d224d92f65d78c4642d9, type: 3}
+      propertyPath: OnRingDrop.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnDrop
+      objectReference: {fileID: 0}
+    - target: {fileID: 1672417027, guid: e09c8ef740a1d224d92f65d78c4642d9, type: 3}
+      propertyPath: OnRingDrag.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1672417027, guid: e09c8ef740a1d224d92f65d78c4642d9, type: 3}
+      propertyPath: OnRingDrop.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 3710457155342728888, guid: e09c8ef740a1d224d92f65d78c4642d9,
         type: 3}
       propertyPath: m_RootOrder

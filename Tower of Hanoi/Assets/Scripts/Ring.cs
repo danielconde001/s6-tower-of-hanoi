@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -11,9 +11,9 @@ public class Ring : MonoBehaviour
         set => respectivePeg = value;
     }
 
-    public bool IsTopOfPeg 
+    public bool IsTopOfStack 
     { 
-        get => respectivePeg.CurrentSetOfRings.Peek() == this; 
+        get => respectivePeg.StackOfRings.Peek() == this; 
     }
 
     private float ringSize;
@@ -33,11 +33,6 @@ public class Ring : MonoBehaviour
     
     private void Awake() {
         material = GetComponent<Renderer>().material;
-    }
-
-    private void Start() {
-        
-        //Debug.Log(IsTopOfPeg, this);
     }
 
 }
