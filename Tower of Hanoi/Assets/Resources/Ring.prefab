@@ -15,6 +15,8 @@ GameObject:
   - component: {fileID: 8239707106875657102}
   - component: {fileID: 8239707106875657097}
   - component: {fileID: 8670462958252116326}
+  - component: {fileID: -1154059982802502137}
+  - component: {fileID: 6572779453010240470}
   m_Layer: 8
   m_Name: Ring
   m_TagString: Untagged
@@ -122,7 +124,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isDraggable: 1
-  OnDragPositionOffset: {x: 0, y: 0.25, z: 0}
+  OnDragPositionOffset: {x: 0, y: 0, z: 0}
 --- !u!114 &8670462958252116326
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -135,3 +137,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c834845aad891f74993827df9295f4ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-1154059982802502137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8239707106875657091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 3
+  outlineColor: {r: 0.990566, g: 0.514945, b: 0, a: 1}
+  outlineWidth: 0
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
+--- !u!114 &6572779453010240470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8239707106875657091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cadbbd3edc6dd64fb003964d5fdb048, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineWidth: 7

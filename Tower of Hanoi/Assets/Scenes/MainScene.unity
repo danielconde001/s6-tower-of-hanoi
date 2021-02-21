@@ -166,6 +166,45 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &449016631 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6718154160891259118, guid: e09c8ef740a1d224d92f65d78c4642d9,
+    type: 3}
+  m_PrefabInstance: {fileID: 3710457155857248699}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &449016638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 449016631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 0
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
+--- !u!114 &449016639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 449016631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6193e56f9d7a3f64d98b81c9cef95926, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineWidth: 7
+  positiveColor: {r: 0.52563584, g: 0.990566, b: 0.032707386, a: 1}
+  negativeColor: {r: 1, g: 0.0990566, b: 0.0990566, a: 1}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -353,6 +392,84 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3968645301f7cfb44ae577df35b90fa3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1313421797 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6718154159384208759, guid: e09c8ef740a1d224d92f65d78c4642d9,
+    type: 3}
+  m_PrefabInstance: {fileID: 3710457155857248699}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1313421804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1313421797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 0
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
+--- !u!114 &1313421805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1313421797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6193e56f9d7a3f64d98b81c9cef95926, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineWidth: 7
+  positiveColor: {r: 0.52563584, g: 0.990566, b: 0.032707386, a: 1}
+  negativeColor: {r: 1, g: 0.0990566, b: 0.0990566, a: 1}
+--- !u!1 &2145579425 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7912761306304597153, guid: e09c8ef740a1d224d92f65d78c4642d9,
+    type: 3}
+  m_PrefabInstance: {fileID: 3710457155857248699}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2145579432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2145579425}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 0
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
+--- !u!114 &2145579433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2145579425}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6193e56f9d7a3f64d98b81c9cef95926, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineWidth: 7
+  positiveColor: {r: 0.52563584, g: 0.990566, b: 0.032707386, a: 1}
+  negativeColor: {r: 1, g: 0.0990566, b: 0.0990566, a: 1}
 --- !u!1001 &3710457155857248699
 PrefabInstance:
   m_ObjectHideFlags: 0

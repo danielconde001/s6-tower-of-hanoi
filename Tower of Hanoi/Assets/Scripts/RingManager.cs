@@ -94,7 +94,7 @@ public class RingManager : MonoBehaviour
 
         for (int i = 0; i < maxNumberOfRings; i++)
         {
-            listOfAllRings[i].RingColor =  availableRingColors[i % availableRingColors.Count];   
+            listOfAllRings[i].RingColor =  availableRingColors[i % availableRingColors.Count]; 
         } 
     }
 

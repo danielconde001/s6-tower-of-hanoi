@@ -11,9 +11,15 @@ public class Ring : MonoBehaviour
         set => respectivePeg = value;
     }
 
+    private bool isTopOfStack()
+    {
+        if (respectivePeg.StackOfRings.Count <= 0) return true;
+        else if (respectivePeg.StackOfRings.Peek() == this) return true;
+        else return false;
+    }
     public bool IsTopOfStack 
     { 
-        get => respectivePeg.StackOfRings.Peek() == this; 
+        get => isTopOfStack(); 
     }
 
     private float ringSize;
