@@ -172,6 +172,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ac40b82a0d28eb4d9c30be08321c7ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  musicPlayer: {fileID: 0}
+  sfxPlayer: {fileID: 0}
+  musicMixer: {fileID: 24100000, guid: 814fe31880d0afe4dac91fa3e59b66ff, type: 2}
+  sfxMixer: {fileID: 24100000, guid: ddebf2c896486c04f8a4cd6f676588a9, type: 2}
+  pressButtonSFX: {fileID: 8300000, guid: f5ab874fd1f4a4c7cb3ff691b729fbfa, type: 3}
+  backgroundMusic: {fileID: 8300000, guid: b854f058a3f93ec489757b241d8110de, type: 3}
+  minimalVolume: -40
 --- !u!1 &8440048059176924528
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,21 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
 
 [RequireComponent(typeof(Ring), typeof(PegDetection))]
 public class RingDraggable : Draggable
 {
-    private Ring ring;
-    private PegDetection pegDetection;
+    protected Ring ring;
+    protected PegDetection pegDetection;
 
-    private void Awake() {
+    protected void Awake() {
         ring = GetComponent<Ring>();
         pegDetection = GetComponent<PegDetection>();
     }
 
     protected override void OnMouseUp()
     {
+        base.OnMouseUp();
+
         if (isDraggable)
             DropRingOnPeg();
     }
@@ -38,7 +39,7 @@ public class RingDraggable : Draggable
         }
     }
 
-    private void DropRingOnPeg()
+    protected void DropRingOnPeg()
     {
         pegDetection.PegToDropRingOn.StackOfRings.Push(this.ring);
         Vector3 pegPosition = pegDetection.PegToDropRingOn.transform.position;

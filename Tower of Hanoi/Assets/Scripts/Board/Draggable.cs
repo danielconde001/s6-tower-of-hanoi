@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Draggable : MonoBehaviour
 {
@@ -14,21 +15,28 @@ public class Draggable : MonoBehaviour
     [SerializeField] protected Vector3 OnDragPositionOffset;
     protected float zPos;
 
+    [SerializeField] protected UnityEvent OnLift;
+    [SerializeField] protected UnityEvent OnDrop;
+
     protected virtual void OnMouseUp() {
-        if (isDraggable)
-            transform.position = transform.position - OnDragPositionOffset;
+        if (isDraggable) {
+            OnDrop.Invoke();
+        }
     }
 
     protected virtual void OnMouseDown()
     {
-        if (isDraggable)
+        if (isDraggable) {
             zPos = Camera.main.WorldToScreenPoint(transform.position).z;
+            OnLift.Invoke();
+        }
     }
 
     protected virtual void OnMouseDrag()
     {
-        if (isDraggable)
+        if (isDraggable) {
             transform.position = GetMouseWolrdPos() + OnDragPositionOffset;
+        }
     }
 
     private Vector3 GetMouseWolrdPos()
