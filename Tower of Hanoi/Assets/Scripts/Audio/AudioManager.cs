@@ -12,6 +12,7 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private AudioMixer sfxMixer;
 
     [SerializeField] private AudioClip pressButtonSFX;
+    [SerializeField] private AudioClip winSFX;
 
     [SerializeField] private AudioClip backgroundMusic;
 
@@ -42,8 +43,8 @@ public class AudioManager : MonoBehaviour
         if (volume <= minimalVolume) sfxMixer.SetFloat("SFXVolume", -80f);
     }
 
-    public void PlayButtonSFX()
+    public void PlaySFX(AudioClip clip)
     {
-        sfxPlayer.PlayOneShot(pressButtonSFX);
+        sfxPlayer.PlayOneShot(clip);
     }
 }

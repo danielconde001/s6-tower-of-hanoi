@@ -10,6 +10,10 @@ public class RingManager : MonoBehaviour
     [Range(3, 10)]
     [SerializeField] private int maxNumberOfRings;
     public int MaxNumberOfRings { get => maxNumberOfRings; }
+    public void SetMaxNumberOfRings(float setNumber)
+    {
+        maxNumberOfRings = (int)setNumber;
+    }
 
     // List of all rings
     [SerializeField] private List<Ring> listOfAllRings;
@@ -33,7 +37,7 @@ public class RingManager : MonoBehaviour
         set => currentlyDraggedRing = value;
     }
 
-    private void Start() {
+    public void StartGame() {
         CreateRings();
         PositionRings();
         AdjustRingSizes();
