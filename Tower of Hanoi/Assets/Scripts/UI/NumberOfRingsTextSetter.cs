@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Events;
 
 [RequireComponent(typeof(TMPro.TMP_Text))]
-public class UITextNumberSetter : MonoBehaviour
+public class NumberOfRingsTextSetter : MonoBehaviour
 {
     private TMPro.TMP_Text numberText;
 
