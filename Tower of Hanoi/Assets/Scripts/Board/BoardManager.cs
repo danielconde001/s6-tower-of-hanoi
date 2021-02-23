@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BoardManager : MonoBehaviour
+public sealed class BoardManager : MonoBehaviour
 {
     [SerializeField] private List<Peg> pegsOnBoard = new List<Peg>();
     public List<Peg> PegsOnBoard { get => pegsOnBoard; }

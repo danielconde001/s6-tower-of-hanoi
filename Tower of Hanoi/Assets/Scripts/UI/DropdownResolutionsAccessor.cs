@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(TMPro.TMP_Dropdown))]
-public class DropdownResolutionsAccessor : MonoBehaviour
+public sealed class DropdownResolutionsAccessor : MonoBehaviour
 {
     private Resolution[] resolutions;
     private TMPro.TMP_Dropdown resolutionDropdown;

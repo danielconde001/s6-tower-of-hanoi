@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class RingManager : MonoBehaviour
+public sealed class RingManager : MonoBehaviour
 {
     // Assigns number of rings
     [Range(3, 10)]
